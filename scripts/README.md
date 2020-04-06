@@ -11,11 +11,11 @@ A Python script to screen SNP and indel polymorphism in a VCF, used here to desi
 
 * -c, --candidate_file: path to a tab-delimited text file that describes coordinates of interest for probe design, with the following columns:
 
-> 0: chromosome or contig name
-> 1: the start coordinate
-> 2: the stop coordinate
-> 3: the length of the region
-> 4: the name of the locus (gene, etc.)
+  0. chromosome or contig name
+  1. the start coordinate
+  2. the stop coordinate
+  3. the length of the region
+  4. the name of the locus (gene, etc.)
 
 * -i, --vcf_file: path a VCF that summarizes the variants from a set of alignments (in this case we used samtools mpileup). Can be in compressed (e.g. .vcf.gz)
 
