@@ -1,9 +1,28 @@
-## Scripts
+## Probe candidate polymorphism
 
-This directory will contain the custom Python and R scripts used to design the targeted sequence capture array, as well as a summary of how these scripts were used to design the *Salix nigra* targeted sequence capture array.
+A Python script to screen SNP and indel polymorphism in a VCF, used here to design a targeted sequence capture array
 
-### Contents
+### Python 3 dependencies
 
-1. [README.md](https://github.com/BrianSanderson/salix-nigra-slr/blob/master/scripts/README.md): this file
+* pyvcf (imported as vcf)
+* tqdm
 
-2. [poly_screen.py](https://github.com/BrianSanderson/salix-nigra-slr/blob/master/scripts/poly_screen.py): a python script for quantifying the frequency of SNPs and indels in candidate regions for sequence capture probe design
+### Required parameters
+
+* -c, --candidate_file: path to a tab-delimited text file that describes coordinates of interest for probe design, with the following columns:
+
+> 0: chromosome or contig name
+> 1: the start coordinate
+> 2: the stop coordinate
+> 3: the length of the region
+> 4: the name of the locus (gene, etc.)
+
+* -i, --vcf_file: path a VCF that summarizes the variants from a set of alignments (in this case we used samtools mpileup). Can be in compressed (e.g. .vcf.gz)
+
+*  -o, --out_file: path to write a tab-delimited file that describes the number of SNPs and indels in each candidate region
+
+### Optional parameters
+
+* --num_cand: the number of lines in the candidate file, which is used to provide more a informative status bar
+
+* --num_vcf: the number of entries in the VCF, which is used to provide a more informative status bar
