@@ -3,8 +3,7 @@
 This repository contains the scripts and analysis notebooks used for the
 creation of a novel genotyping platform that I designed, and its
 implementation reported in my paper
-[Sex determination through X-Y heterogamety in *Salix nigra*](https://doi.org/10.1101/2020.03.23.000919),
-currently available as a preprint on bioR&chi;iv, and in submission.
+[Sex determination through X-Y heterogamety in *Salix nigra*](https://doi.org/10.1038/s41437-020-00397-3), published in the journal *Heredity* in 2021.
 
 ### Contents
 
